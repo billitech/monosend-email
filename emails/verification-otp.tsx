@@ -88,7 +88,7 @@ export const VerificationOtpEmail = ({
           <Text style={footerText}>Follow us on:</Text>
           <Row style={socials}>
             <Column>
-              <Link href="http://instagram.com/monosend.hq">
+              <Link href="https://instagram.com/monosend.hq">
                 <Img
                   src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-instagram.png"
                   width="28"
@@ -98,7 +98,7 @@ export const VerificationOtpEmail = ({
               </Link>
             </Column>
             <Column>
-              <Link href="http://x.com/monosend">
+              <Link href="https://x.com/monosend">
                 <Img
                   src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-twitter.png"
                   width="28"
@@ -108,7 +108,7 @@ export const VerificationOtpEmail = ({
               </Link>
             </Column>
             <Column>
-              <Link href="http://linkedin.com/monosend">
+              <Link href="https://linkedin.com/monosend">
                 <Img
                   src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-linkedin.png"
                   width="28"
@@ -118,7 +118,7 @@ export const VerificationOtpEmail = ({
               </Link>
             </Column>
             <Column>
-              <Link href="http://facebook.com/monosend">
+              <Link href="https://facebook.com/monosend">
                 <Img
                   src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-facebook.png"
                   width="28"
