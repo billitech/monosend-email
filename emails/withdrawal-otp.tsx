@@ -19,7 +19,7 @@ interface PlaidVerifyIdentityEmailProps {
   validationCode?: string;
 }
 
-export const LoginOtpEmail = ({
+export const WithdrawalOtpEmail = ({
   validationCode,
 }: PlaidVerifyIdentityEmailProps) => (
   <Html lang="en">
@@ -140,11 +140,11 @@ export const LoginOtpEmail = ({
   </Html>
 );
 
-LoginOtpEmail.PreviewProps = {
+WithdrawalOtpEmail.PreviewProps = {
   validationCode: "144833",
 } as PlaidVerifyIdentityEmailProps;
 
-export default LoginOtpEmail;
+export default WithdrawalOtpEmail;
 
 const main = {
   backgroundColor: "#ffffff",
@@ -157,6 +157,8 @@ const container = {
   borderRadius: "5px",
   boxShadow: "0 5px 10px rgba(20,50,70,.2)",
   maxWidth: "360px",
+  marginTop: "24px",
+  marginBottom: "24px",
 };
 
 const logo = {

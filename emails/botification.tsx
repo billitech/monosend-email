@@ -4,27 +4,23 @@ import {
   Container,
   Font,
   Head,
-  Heading,
   Hr,
   Html,
   Img,
   Link,
   Row,
-  Section,
   Text,
 } from "@react-email/components";
 import * as React from "react";
 
-interface PlaidVerifyIdentityEmailProps {
-  validationCode?: string;
+interface NotificationEmailProps {
+  message?: string;
 }
 
-export const VerificationOtpEmail = ({
-  validationCode,
-}: PlaidVerifyIdentityEmailProps) => (
+export const NotificationEmail = ({ message }: NotificationEmailProps) => (
   <Html lang="en">
     <Head>
-      <title>Monosend Verification Code</title>
+      <title>Monosend Notification</title>
       <Font
         fontFamily="Sora"
         fallbackFontFamily="sans-serif"
@@ -56,27 +52,8 @@ export const VerificationOtpEmail = ({
           style={logo}
         />
         <Hr style={line}></Hr>
-        <Img
-          src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-otp.png"
-          width="135.68"
-          height="58"
-          alt="Otp"
-          style={otp}
-        />
-        <Heading style={tertiary}>Verification Code</Heading>
-        <Text style={paragraph}>Hello,</Text>
-        <Text style={paragraph}>
-          Please enter the OTP below to confirm your identity.
-        </Text>
-        <Section style={codeContainer}>
-          <Text style={code}>{validationCode}</Text>
-        </Section>
-        <Text style={paragraph}>
-          This code expires in 5 minutes and should only be used in-app. Do not
-          click any links or share with anybody.
-        </Text>
-        <Container style={line2Container}>
-          <Hr style={line2}></Hr>
+        <Container style={messageContainer}>
+          <p dangerouslySetInnerHTML={{ __html: message ?? "" }}></p>
         </Container>
         <Text style={paragraph}>
           If you experience any problems kindly contact us at{" "}
@@ -134,11 +111,17 @@ export const VerificationOtpEmail = ({
   </Html>
 );
 
-VerificationOtpEmail.PreviewProps = {
-  validationCode: "144833",
-} as PlaidVerifyIdentityEmailProps;
+NotificationEmail.PreviewProps = {
+  message: `<div id=":mh" class="ii gt" jslog="20277; u014N:xr6bB; 1:WyIjdGhyZWFkLWY6MTgwMjcyNTQwNDg3NzA3NzAzMSJd; 4:WyIjbXNnLWY6MTgwMjcyNTQwNDg3NzA3NzAzMSJd"><div id=":mg" class="a3s aiL "><div class="adM">
+</div><h2>Dear valued Monosend user,</h2>
+<p>Your transfer has been confirmed.</p>
+<p><strong>Transfer amount:</strong> 100.00 NGN</p>
+<p><strong>Transfer account:</strong> 0088100851(STERLING BANK) SYLVESTER CHARLIE OKON</p>
+<p><strong>Timestamp:</strong> 2024-06-24 07:08:31</p><div class="yj6qo"></div><div class="adL">
+</div></div></div>`,
+} as NotificationEmailProps;
 
-export default VerificationOtpEmail;
+export default NotificationEmail;
 
 const main = {
   backgroundColor: "#ffffff",
@@ -159,10 +142,6 @@ const logo = {
   margin: "16px auto",
 };
 
-const otp = {
-  margin: "32px auto 20px",
-};
-
 const line = {
   height: "2px",
   color: "#E6F2F9",
@@ -170,48 +149,8 @@ const line = {
   border: "0 none",
 };
 
-const line2 = {
-  height: "1px",
-  color: "#E6F2F9",
-  backgroundColor: "#E6F2F9",
-  border: "0 none",
-};
-
-const line2Container = {
+const messageContainer = {
   padding: "6px 40px",
-};
-
-const tertiary = {
-  fontSize: "24px",
-  fontWeight: 700,
-  fontFamily: "Sora,sans-serif",
-  height: "16px",
-  letterSpacing: "0",
-  lineHeight: "100%",
-  margin: "0 8px 24px 8px",
-  textTransform: "uppercase" as const,
-  textAlign: "center" as const,
-};
-
-const codeContainer = {
-  borderRadius: "4px",
-  margin: "16px auto 16px",
-  verticalAlign: "middle",
-  width: "280px",
-};
-
-const code = {
-  display: "inline-block",
-  fontFamily: "Sora,sans-serif",
-  fontSize: "45.6px",
-  fontWeight: 700,
-  letterSpacing: "6px",
-  lineHeight: "40px",
-  paddingBottom: "8px",
-  paddingTop: "8px",
-  margin: "0 auto",
-  width: "100%",
-  textAlign: "center" as const,
 };
 
 const paragraph = {

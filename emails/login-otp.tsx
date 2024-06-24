@@ -156,6 +156,8 @@ const container = {
   borderRadius: "5px",
   boxShadow: "0 5px 10px rgba(20,50,70,.2)",
   maxWidth: "360px",
+  marginTop: "24px",
+  marginBottom: "24px",
 };
 
 const logo = {
