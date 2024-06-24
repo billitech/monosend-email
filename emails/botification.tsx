@@ -65,7 +65,7 @@ export const NotificationEmail = ({ message }: NotificationEmailProps) => (
           <Text style={footerText}>Follow us on:</Text>
           <Row style={socials}>
             <Column>
-              <Link href="http://instagram.com/monosend">
+              <Link href="http://instagram.com/monosend.hq">
                 <Img
                   src="https://pub-b2df118648294b0b83ff484b21bef19c.r2.dev/email-instagram.png"
                   width="28"
