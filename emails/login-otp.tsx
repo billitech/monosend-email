@@ -19,10 +19,6 @@ interface PlaidVerifyIdentityEmailProps {
   validationCode?: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
 export const LoginOtpEmail = ({
   validationCode,
 }: PlaidVerifyIdentityEmailProps) => (
