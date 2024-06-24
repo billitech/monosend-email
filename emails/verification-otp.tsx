@@ -64,21 +64,16 @@ export const LoginOtpEmail = ({
           style={otp}
         />
         <Heading style={tertiary}>Verification Code</Heading>
-        <Text style={paragraph}>Hello Billy,</Text>
+        <Text style={paragraph}>Hello,</Text>
         <Text style={paragraph}>
-          We noticed a login attempt and, for your security, a verification code
-          has been sent to your email address.
-        </Text>
-        <Text style={paragraph}>
-          Please enter the code bellow on the verification screen to complete
-          the login.
+          Please enter the OTP below to confirm your identity.
         </Text>
         <Section style={codeContainer}>
           <Text style={code}>{validationCode}</Text>
         </Section>
         <Text style={paragraph}>
-          If you did not attempt to log in, please contact our support team
-          immediately.
+          This code expires in 5 minutes and should only be used in-app. Do not
+          click any links or share with anybody.
         </Text>
         <Container style={line2Container}>
           <Hr style={line2}></Hr>

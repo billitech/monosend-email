@@ -66,19 +66,20 @@ export const LoginOtpEmail = ({
         <Heading style={tertiary}>Verification Code</Heading>
         <Text style={paragraph}>Hello Billy,</Text>
         <Text style={paragraph}>
-          We noticed a login attempt and, for your security, a verification code
-          has been sent to your email address.
+          We noticed a withdrawal request from your account. For security
+          purposes, a One-Time Password (OTP) has been sent to your email
+          address.
         </Text>
         <Text style={paragraph}>
-          Please enter the code bellow on the verification screen to complete
-          the login.
+          Please enter the OTP on the verification screen to complete the
+          withdrawal.
         </Text>
         <Section style={codeContainer}>
           <Text style={code}>{validationCode}</Text>
         </Section>
         <Text style={paragraph}>
-          If you did not attempt to log in, please contact our support team
-          immediately.
+          If you did not initiate this withdrawal, please contact our support
+          team immediately.
         </Text>
         <Container style={line2Container}>
           <Hr style={line2}></Hr>
